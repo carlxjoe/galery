@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FOTO KECE ON PINTEREST | BY VIN</title>
+
+<style>
+.darkmode .light-theme {
+  --black-color: #000;
+  --grey-color: #b5b2b2;
+  --grey-color-200: #9e9e9e;
+  --grey-border: #e4dfdd;
+  --grey-border-200: rgba(149, 146, 146, 0.32);
+  --text-color: rgba(0, 0, 0, 0.7);
+  --white-color: #fff;
+  --green-color: #88ffc6;
+}
+.darkmode .dark-theme {
+  --black-color: #fff;
+  --text-color: rgba(255, 255, 255, 0.7);
+  --white-color: #000;
+  --green-color: #88ffc6;
+}
+.darkmode ul,
+.darkmode ol {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+}
+.darkmode .light-theme-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+}
+.darkmode .light-theme-body  .h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+}
+.darkmode a {
+  text-decoration: none;
+  transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+}
+
+.darkmode p,
+.darkmode span,
+.darkmode li {
+  transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+}
+
+.darkmode .banner {
+  overflow: hidden;
+  min-height: 300px;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  padding: 40px;
+  position: relative;
+}
+.darkmode .banner-left ,
+.darkmode .banner-right  {
+  z-index: 1;  
+}
+.darkmode .banner::after {
+  content: "";
+  position: absolute;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  top: 0;
+  right: 0%;
+  width: 0%;
+  background: #000;
+  height: 100%;
+}
+.darkmode .dark-theme .banner::after {
+  content: "";
+  width: 100%;
+}
+.darkmode .banner-left .h1 {
+  margin-bottom: 0px;
+  position: relative;
+  color: var(--black-color);
+}
+.darkmode .dark-theme .banner-left h1 {
+  color: #000;
+  text-shadow: 0px 0px 2px #88ffc6;
+}
+.darkmode .banner-left .h1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  left: -40px;
+  width: 10px;
+  background: var(--green-color);
+  height: 100%;
+}
+.darkmode .inner-desc {
+  margin-top: 58px;
+  max-width: 1000px;
+}
+.darkmode .inner-desc form {
+  margin-top: 51px;
+}
+.darkmode .banner-left p {
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+.darkmode .switch {
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 50px;
+  width: 200px;
+  transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+}
+.darkmode .switch.checked {
+  background: #34323d;
+}
+.darkmode .switch::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50px;
+  z-index: 1;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.darkmode .switch input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.darkmode .switch span {
+  color: var(--black-color);
+  display: block;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  z-index: 2;
+  text-transform: capitalize;
+}
+.darkmode .switch.checked::before {
+  left: 50%;
+}
+.darkmode .switch.checked .dark-txt {
+  color: #000;
+}
+.darkmode .social-icons {
+  margin-top: 90px;
+}
+.darkmode .social-icons li {
+  margin: 0px 10px;
+}
+.darkmode .social-icons li:first-child {
+  margin-left: 0px;
+}
+.darkmode .social-icons li:last-child {
+  margin-right: 0px;
+}
+.darkmode .social-icons a {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--grey-border-200);
+  color: var(--black-color);
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.darkmode .social-icons a:hover {
+  background: var(--black-color);
+  border-color: var(--black-color);
+  color: var(--white-color);
+}
+.darkmode .social-icons div {
+    color: var(--text-color);
+}
+
+@keyframes myanimation {
+  0% {
+    transform: translateY(calc(-40% + 50vh));
+    -webkit-transform: translateY(calc(-50% + 50vh));
+  }
+  25% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(calc(-100% + 100vh));
+    -webkit-transform: translateY(calc(-100% + 100vh));
+  }
+  100% {
+    transform: translateY(calc(-40% + 50vh));
+    -webkit-transform: translateY(calc(-50% + 50vh));
+  }
+}
+
+@keyframes myanimationtwo {
+  0% {
+    transform: translateY(calc(-70% + 100vh));
+    -webkit-transform: translateY(calc(-70% + 100vh));
+  }
+  25% {
+    transform: translateY(calc(-100% + 100vh));
+    -webkit-transform: translateY(calc(-100% + 100vh));
+  }
+  75% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(calc(0%));
+  }
+  100% {
+    transform: translateY(calc(-70% + 100vh));
+    -webkit-transform: translateY(calc(-70% + 100vh));
+  }
+}
+</style>
+</head>
+
+<div class="position-relative my-1 text-center darkmode">
+<div class="light-theme light-theme-body alert-info">
+  <div class="banner row m-0">
+        <div class="banner-left col-md-7">
+            <label class="switch d-flex pointer">
+                <input id="toggle-theme" type="checkbox">
+                <span class="light-txt">light</span>
+                <span class="dark-txt">dark</span>
+            </label>
+<body>
+  <h1>Undefined</h1>
+  <p>Tekan gambar untuk mengunduh gambar!</p>
+  <p>
+<figure>
+      <a href="#">
+    <img src="https://raw.githubusercontent.com/carlxjoe/galery/main/img/fc05bf9f0b8a5bb9154615d9bc343900.jpg" style="width: 160px;border-radius: 10px;"/>
+</a>
+      <a href="#">
+    <img alt="Follow me on tiktok" src="https://github.com/carlxjoe/galery/raw/main/img/c875ba2b6f33f81d3cab5d66767b5d2a.jpg" style="width: 160px;border-radius: 10px;"/>
+</a>
+      <a href="#">
+    <img src="https://github.com/carlxjoe/galery/raw/main/img/f0778f558c3c9c0161b7e158b8caa699.jpg" style="width: 160px;border-radius: 10px;"/>
+</a>
+</figure>
+  </p>
+  <div class="banner-right col-md-5">
+            <div class="social-icons d-block align-items-center">
+                <ul class="d-flex">
+                    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+                <div>Follow us</div>
+            </div>
+        </div>
+        </div>
+  </div>
+  </div>
+</body>
+<script>
+jQuery(document).ready(function ($) {
+  const themeSwitch = document.querySelector("#toggle-theme");
+  const body = document.querySelector(".light-theme-body");
+  themeSwitch.addEventListener("change", () => {
+    toggleRootClass();
+  });
+function toggleRootClass() {
+  document.querySelector(".light-theme-body").classList.toggle("dark-theme");
+}
+
+  $("#toggle-theme").on("click", function () {
+    $(this).parent().toggleClass("checked");
+  });
+
+});
+</script>
+</html>
