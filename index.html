@@ -1,299 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <title>FOTO KECE ON PINTEREST | BY VIN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Galery</title>
 
 <style>
-.darkmode .light-theme {
-  --black-color: #000;
-  --grey-color: #b5b2b2;
-  --grey-color-200: #9e9e9e;
-  --grey-border: #e4dfdd;
-  --grey-border-200: rgba(149, 146, 146, 0.32);
-  --text-color: rgba(0, 0, 0, 0.7);
-  --white-color: #fff;
-  --green-color: #88ffc6;
-}
-.darkmode .dark-theme {
-  --black-color: #fff;
-  --text-color: rgba(255, 255, 255, 0.7);
-  --white-color: #000;
-  --green-color: #88ffc6;
-}
-.darkmode ul,
-.darkmode ol {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  transition: all 1.2s;
-  -webkit-transition: all 1.2s;
-}
-.darkmode .light-theme-body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  line-height: 30px;
-}
-.darkmode .light-theme-body  .h1 {
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: all 1.2s;
-  -webkit-transition: all 1.2s;
-}
-.darkmode a {
-  text-decoration: none;
-  transition: all 1.2s;
-  -webkit-transition: all 1.2s;
-}
+body {border: 0;font-family: Arial, sans-serif;font-size: 14px;font-weight: normal;margin: 0;outline: 0;padding: 0;background:#e5e5e5;}
+#main-wrapper {max-width:960px;background:#fff;margin:30px auto}
+header {color:#333;text-align:center;padding:30px}
+header h1 {font-size:36px}
+.menu {background:#e8e8e8;text-align:left;padding:2px 30px;position:relative}
+.menu p {font-weight:bold}
+article {background:#fff;color:#777;padding:30px;text-align:left;font-size:14px; font-weight:normal}
+article h2 {color:#111}
+footer {background:#000;color:#fff;padding:20px;text-align:center}
+footer a {color:#f3f3f9;text-decoration:none}
+footer a:hover {color:#333}
 
-.darkmode p,
-.darkmode span,
-.darkmode li {
-  transition: all 1.2s;
-  -webkit-transition: all 1.2s;
-}
+/* Icon Dark Mode */
+.dark-switch, .dark-link {position:absolute;top:15px;right:30px;width:20px;height:20px;z-index:10;cursor:pointer}  
+.dark-link .svg-2, .dark-mode .dark-link .svg-1{display:none}
+.dark-mode .dark-link .svg-2{display:block;}
+.dark-mode .dark-link svg.line{fill:none;stroke:#eaff00}  
 
-.darkmode .banner {
-  overflow: hidden;
-  min-height: 300px;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
-  padding: 40px;
+/* Teks Dark Mode */
+.dark {position:absolute;  min-width:60px;top:5px;right:25px;font-family:Arial;font-size:11px;color:#333}
+.light {position:absolute; min-width:60px;top:5px;right:25px;font-family:Arial;font-size:11px;color:#ccc;display:none}
+.dark-mode .dark {display:none}
+.dark-mode .light {display:block}  
+
+/* Layout Blog Mode Dark */
+body.dark-mode {background:#111}
+.dark-mode header{background:#909090;color:#fff}
+.dark-mode .menu{background:#646464;color:#fff}
+.dark-mode article{background:#7c7a7a;color:#fff}
+.dark-mode article h2{color:#f5f5f5}
+.dark-mode footer{background:#333}
+.dark-mode footer a{color:#f8eda2}
+.dark-mode footer a:hover{color:#fefefe}
+
+.container {
   position: relative;
+  width: 65%;
 }
-.darkmode .banner-left ,
-.darkmode .banner-right  {
-  z-index: 1;  
-}
-.darkmode .banner::after {
-  content: "";
-  position: absolute;
-  transition: all 1s;
-  -webkit-transition: all 1s;
-  top: 0;
-  right: 0%;
-  width: 0%;
-  background: #000;
-  height: 100%;
-}
-.darkmode .dark-theme .banner::after {
-  content: "";
+
+/* Make the image responsive */
+.container img {
   width: 100%;
+  height: auto;
+  filter: blur(2.5px);
 }
-.darkmode .banner-left .h1 {
-  margin-bottom: 0px;
-  position: relative;
-  color: var(--black-color);
-}
-.darkmode .dark-theme .banner-left h1 {
-  color: #000;
-  text-shadow: 0px 0px 2px #88ffc6;
-}
-.darkmode .banner-left .h1::before {
-  content: "";
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  left: -40px;
-  width: 10px;
-  background: var(--green-color);
-  height: 100%;
-}
-.darkmode .inner-desc {
-  margin-top: 58px;
-  max-width: 1000px;
-}
-.darkmode .inner-desc form {
-  margin-top: 51px;
-}
-.darkmode .banner-left p {
-  text-transform: uppercase;
-  color: var(--text-color);
-}
-.darkmode .switch {
-  margin-bottom: 20px;
-  background: rgba(0, 0, 0, 0.1);
-  position: relative;
-  border-radius: 50px;
-  width: 200px;
-  transition: all 1.2s;
-  -webkit-transition: all 1.2s;
-}
-.darkmode .switch.checked {
-  background: #34323d;
-}
-.darkmode .switch::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background: #fff;
-  border-radius: 50px;
-  z-index: 1;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
-  transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -webkit-transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.darkmode .switch input[type="checkbox"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-.darkmode .switch span {
-  color: var(--black-color);
-  display: block;
-  width: 50%;
-  text-align: center;
-  padding: 10px;
-  z-index: 2;
-  text-transform: capitalize;
-}
-.darkmode .switch.checked::before {
   left: 50%;
-}
-.darkmode .switch.checked .dark-txt {
-  color: #000;
-}
-.darkmode .social-icons {
-  margin-top: 90px;
-}
-.darkmode .social-icons li {
-  margin: 0px 10px;
-}
-.darkmode .social-icons li:first-child {
-  margin-left: 0px;
-}
-.darkmode .social-icons li:last-child {
-  margin-right: 0px;
-}
-.darkmode .social-icons a {
-  width: 40px;
-  height: 40px;
-  font-size: 18px;
-  line-height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--grey-border-200);
-  color: var(--black-color);
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  -webkit-justify-content: center;
-  align-items: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-align-items: center;
-}
-.darkmode .social-icons a:hover {
-  background: var(--black-color);
-  border-color: var(--black-color);
-  color: var(--white-color);
-}
-.darkmode .social-icons div {
-    color: var(--text-color);
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 10px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-@keyframes myanimation {
-  0% {
-    transform: translateY(calc(-40% + 50vh));
-    -webkit-transform: translateY(calc(-50% + 50vh));
-  }
-  25% {
-    transform: translateY(0%);
-    -webkit-transform: translateY(0%);
-  }
-  75% {
-    transform: translateY(calc(-100% + 100vh));
-    -webkit-transform: translateY(calc(-100% + 100vh));
-  }
-  100% {
-    transform: translateY(calc(-40% + 50vh));
-    -webkit-transform: translateY(calc(-50% + 50vh));
-  }
-}
-
-@keyframes myanimationtwo {
-  0% {
-    transform: translateY(calc(-70% + 100vh));
-    -webkit-transform: translateY(calc(-70% + 100vh));
-  }
-  25% {
-    transform: translateY(calc(-100% + 100vh));
-    -webkit-transform: translateY(calc(-100% + 100vh));
-  }
-  75% {
-    transform: translateY(0%);
-    -webkit-transform: translateY(calc(0%));
-  }
-  100% {
-    transform: translateY(calc(-70% + 100vh));
-    -webkit-transform: translateY(calc(-70% + 100vh));
-  }
+.container .btn:hover {
+  background-color: black;
 }
 </style>
 </head>
+<body id="mainContent">
 
-<div class="position-relative my-1 text-center darkmode">
-<div class="light-theme light-theme-body alert-info">
-  <div class="banner row m-0">
-        <div class="banner-left col-md-7">
-            <label class="switch d-flex pointer">
-                <input id="toggle-theme" type="checkbox">
-                <span class="light-txt">light</span>
-                <span class="dark-txt">dark</span>
-            </label>
-<body>
-  <h1>Undefined</h1>
-  <p>Tekan gambar untuk mengunduh gambar!</p>
-  <p>
+<div id="main-wrapper">
+  <header>
+	<h1>My Blog</h1>
+  </header>
+  <div class="menu"><p>TELEGRAM</p>
+  <div class='dark-link' onclick='darkMode()'>
+  <span class="dark">Dark Mode</span><svg class='line svg-1' data-text='Dark mode' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'/></svg>
+ <span class="light">Light Mode</span> <svg class='line svg-2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><circle cx='12' cy='12' r='5'/><line x1='12' x2='12' y1='1' y2='3'/><line x1='12' x2='12' y1='21' y2='23'/><line x1='4.22' x2='5.64' y1='4.22' y2='5.64'/><line x1='18.36' x2='19.78' y1='18.36' y2='19.78'/><line x1='1' x2='3' y1='12' y2='12'/><line x1='21' x2='23' y1='12' y2='12'/><line x1='4.22' x2='5.64' y1='19.78' y2='18.36'/><line x1='18.36' x2='19.78' y1='5.64' y2='4.22'/></svg>
+</div>
+  </div>
+  <article>
+  <h2>Gallery</h2>
 <figure>
-      <a href="#">
+  <div class="container">
     <img src="https://raw.githubusercontent.com/carlxjoe/galery/main/img/fc05bf9f0b8a5bb9154615d9bc343900.jpg" style="width: 160px;border-radius: 10px;"/>
-</a>
-      <a href="#">
+    <a href="https://raw.githubusercontent.com/carlxjoe/galery/main/img/fc05bf9f0b8a5bb9154615d9bc343900.jpg">
+    <button class="btn">Lihat</button>
+    </a>
+    </div>
+      <div class="container">
     <img alt="Follow me on tiktok" src="https://github.com/carlxjoe/galery/raw/main/img/c875ba2b6f33f81d3cab5d66767b5d2a.jpg" style="width: 160px;border-radius: 10px;"/>
-</a>
-      <a href="#">
+   <a href="https://raw.githubusercontent.com/carlxjoe/galery/main/img/fc05bf9f0b8a5bb9154615d9bc343900.jpg">
+    <button class="btn">Lihat</button>
+    </a>
+    </div>
+    <div class="container">
     <img src="https://github.com/carlxjoe/galery/raw/main/img/f0778f558c3c9c0161b7e158b8caa699.jpg" style="width: 160px;border-radius: 10px;"/>
-</a>
+    <a href="https://github.com/carlxjoe/galery/raw/main/img/f0778f558c3c9c0161b7e158b8caa699.jpg">
+        <button class="btn">Lihat</button>
+    </a>
+    </div>
 </figure>
-  </p>
-  <div class="banner-right col-md-5">
-            <div class="social-icons d-block align-items-center">
-                <ul class="d-flex">
-                    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                </ul>
-                <div>Follow us</div>
-            </div>
-        </div>
-        </div>
-  </div>
-  </div>
+<h2>Videos<h2>
+  <video controls>
+  <source src=”video/DownloaderBot_video_1673150862.mp4” type=”video/mp4” />
+</video>
+  </article>
+</div>  
+  <footer>
+  <a href="https://t.me/davxndev">Davian</a> &copy;  <script>document.write(new Date().getFullYear())</script> All Right Reserved
+  </footer>
+	<script>
+//<![CDATA[
+function darkMode(){localStorage.setItem("mode","darkmode"===localStorage.getItem("mode")?"light":"darkmode"),"darkmode"===localStorage.getItem("mode")?document.querySelector("#mainContent").classList.add("dark-mode"):document.querySelector("#mainContent").classList.remove("dark-mode")};
+(localStorage.getItem('mode')) === 'darkmode' ? document.querySelector('#mainContent').classList.add('dark-mode') : document.querySelector('#mainContent').classList.remove('dark-mode') 
+//]]>
+</script> 	
 </body>
-<script>
-jQuery(document).ready(function ($) {
-  const themeSwitch = document.querySelector("#toggle-theme");
-  const body = document.querySelector(".light-theme-body");
-  themeSwitch.addEventListener("change", () => {
-    toggleRootClass();
-  });
-function toggleRootClass() {
-  document.querySelector(".light-theme-body").classList.toggle("dark-theme");
-}
-
-  $("#toggle-theme").on("click", function () {
-    $(this).parent().toggleClass("checked");
-  });
-
-});
-</script>
 </html>
+
