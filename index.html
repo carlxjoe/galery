@@ -1,126 +1,192 @@
+<!--FOLLOW IG: rizxyux--
+----YOUTUBE:   Rizxyu-->
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<title>Galery</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas kelompok</title>
+    <!-----<link rel="stylesheet" href="style.css" />----->
+    <script src="https://kit.fontawesome.com/c2536e7781.js" crossorigin="anonymous"></script>
+    <style>
+    /* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-<style>
-body {border: 0;font-family: Arial, sans-serif;font-size: 14px;font-weight: normal;margin: 0;outline: 0;padding: 0;background:#e5e5e5;}
-#main-wrapper {max-width:960px;background:#fff;margin:30px auto}
-header {color:#333;text-align:center;padding:30px}
-header h1 {font-size:36px}
-.menu {background:#e8e8e8;text-align:left;padding:2px 30px;position:relative}
-.menu p {font-weight:bold}
-article {background:#fff;color:#777;padding:30px;text-align:left;font-size:14px; font-weight:normal}
-article h2 {color:#111}
-footer {background:#000;color:#fff;padding:20px;text-align:center}
-footer a {color:#f3f3f9;text-decoration:none}
-footer a:hover {color:#333}
-
-/* Icon Dark Mode */
-.dark-switch, .dark-link {position:absolute;top:15px;right:30px;width:20px;height:20px;z-index:10;cursor:pointer}  
-.dark-link .svg-2, .dark-mode .dark-link .svg-1{display:none}
-.dark-mode .dark-link .svg-2{display:block;}
-.dark-mode .dark-link svg.line{fill:none;stroke:#eaff00}  
-
-/* Teks Dark Mode */
-.dark {position:absolute;  min-width:60px;top:5px;right:25px;font-family:Arial;font-size:11px;color:#333}
-.light {position:absolute; min-width:60px;top:5px;right:25px;font-family:Arial;font-size:11px;color:#ccc;display:none}
-.dark-mode .dark {display:none}
-.dark-mode .light {display:block}  
-
-/* Layout Blog Mode Dark */
-body.dark-mode {background:#111}
-.dark-mode header{background:#909090;color:#fff}
-.dark-mode .menu{background:#646464;color:#fff}
-.dark-mode article{background:#7c7a7a;color:#fff}
-.dark-mode article h2{color:#f5f5f5}
-.dark-mode footer{background:#333}
-.dark-mode footer a{color:#f8eda2}
-.dark-mode footer a:hover{color:#fefefe}
-
-.container {
-  position: relative;
-  width: 65%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+}
+body {
+  background-color: #fff;
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+  display: flex;
+  align-items: center;
+  justify-content: center
+  min-height: 100vh;
+  
 }
 
-/* Make the image responsive */
-.container img {
-  width: 100%;
-  height: auto;
-  filter: blur(2.5px);
+.header {
+  position: fixed;
+  background-color: white;
+  border-radius: 15px;
+  height: 50px;
+  opacity: 80%;
+  top: 3%;
+  margin-top: -3%;
+  right: 1%;
+  left: 1%;
+  box-shadow: 0px 0px 10px #161716;
 }
-
-/* Style the button and place it in the middle of the container/image */
-.container .btn {
+.header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.header h1 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
+  top: 20%;
+  left: 5%;
+  right: 5%;
+  font-size: 20px;
+  color: black;
+}
+.header i {
+  position: relative;
+  top: 20%;
+  right: 5%;
+  left: 90%;
+  color: black;
+}
+.article {
+  position: fixed;
+  background-color: #fff;
+  border-radius: 10px;
+  top: 100%;
+  margin-top: -100%;
+  left: 1%;
+  right: 1%;
+  box-shadow: 0px 0px 10px #161716;
+  opacity: 80%;
+}
+
+
+.article hm {
+  position: absolute;
   font-size: 10px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+  top: 10%;
+  left: 10%;
+  color: #0000;
+}
+.article h1 {
+  position: relative;
+  left: 9%; /* Ubah "9%" ini untuk kekanan*/
+  top: 50%; /* Ubah 50% Untuk kebawah -50% untuk keatas*/
+  margin-top: 2%;
+  font-size: 38px;
 }
 
-.container .btn:hover {
-  background-color: black;
+.borderv1 {
+  position: fixed;
+  border-radius: 20px;
+  background-color: #fff;
+  top: 58%;
+  box-shadow: 0px 0px 40px #161716;
+  left: 1%;
+  right: 1%;
 }
-</style>
-</head>
-<body id="mainContent">
+.borderv1 p {
+  position: relative;
+  margin-top: 5%;
+  color: #000;
+  font-size: 13px;
+  left: 3%;
+}
 
-<div id="main-wrapper">
-  <header>
-	<h1>My Blog</h1>
-  </header>
-  <div class="menu"><p>TELEGRAM</p>
-  <div class='dark-link' onclick='darkMode()'>
-  <span class="dark">Dark Mode</span><svg class='line svg-1' data-text='Dark mode' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'/></svg>
- <span class="light">Light Mode</span> <svg class='line svg-2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><circle cx='12' cy='12' r='5'/><line x1='12' x2='12' y1='1' y2='3'/><line x1='12' x2='12' y1='21' y2='23'/><line x1='4.22' x2='5.64' y1='4.22' y2='5.64'/><line x1='18.36' x2='19.78' y1='18.36' y2='19.78'/><line x1='1' x2='3' y1='12' y2='12'/><line x1='21' x2='23' y1='12' y2='12'/><line x1='4.22' x2='5.64' y1='19.78' y2='18.36'/><line x1='18.36' x2='19.78' y1='5.64' y2='4.22'/></svg>
-</div>
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    </style>
+  </head>
+  <body>
+  <div class="header">
+ <h1 align="center">ARTICLE<h1>
+  <span onclick="openNav()"> <i class="fa-solid fa-bars"></i></span>
   </div>
-  <article>
-  <h2>Gallery</h2>
-<figure>
-  <div class="container">
-    <img src="https://raw.githubusercontent.com/carlxjoe/galery/main/img/fc05bf9f0b8a5bb9154615d9bc343900.jpg" style="width: 160px;border-radius: 10px;"/>
-    <a href="https://raw.githubusercontent.com/carlxjoe/galery/main/img/fc05bf9f0b8a5bb9154615d9bc343900.jpg">
-    <button class="btn">Lihat</button>
-    </a>
-    </div>
-      <div class="container">
-    <img alt="Follow me on tiktok" src="https://github.com/carlxjoe/galery/raw/main/img/c875ba2b6f33f81d3cab5d66767b5d2a.jpg" style="width: 160px;border-radius: 10px;"/>
-   <a href="https://raw.githubusercontent.com/carlxjoe/galery/main/img/fc05bf9f0b8a5bb9154615d9bc343900.jpg">
-    <button class="btn">Lihat</button>
-    </a>
-    </div>
-    <div class="container">
-    <img src="https://github.com/carlxjoe/galery/raw/main/img/f0778f558c3c9c0161b7e158b8caa699.jpg" style="width: 160px;border-radius: 10px;"/>
-    <a href="https://github.com/carlxjoe/galery/raw/main/img/f0778f558c3c9c0161b7e158b8caa699.jpg">
-        <button class="btn">Lihat</button>
-    </a>
-    </div>
-</figure>
-<h2>Videos<h2>
-    <iframe src="https://drive.google.com/file/d/1XNhMy1yY-m_bQLXfIMCe1S_N__D_hrHa/preview">
-</iframe>
-  </article>
-</div>  
-  <footer>
-  <a href="https://t.me/davxndev">Davian</a> &copy;  <script>document.write(new Date().getFullYear())</script> All Right Reserved
-  </footer>
-	<script>
-//<![CDATA[
-function darkMode(){localStorage.setItem("mode","darkmode"===localStorage.getItem("mode")?"light":"darkmode"),"darkmode"===localStorage.getItem("mode")?document.querySelector("#mainContent").classList.add("dark-mode"):document.querySelector("#mainContent").classList.remove("dark-mode")};
-(localStorage.getItem('mode')) === 'darkmode' ? document.querySelector('#mainContent').classList.add('dark-mode') : document.querySelector('#mainContent').classList.remove('dark-mode') 
-//]]>
-</script> 	
-</body>
-</html>
+  <!--Div class article here-->
+  <div class="borderv1">
+  <h2 align="left">Mengenal Hewan Komodo</h2>
+  <p align="left">Komodo atau lengkapnya biawak komodo (Varanus komodoensis), </br> adalah spesies biawak besar yang terdapat di Pulau Komodo, Rinca, Flores, Gili Motang,</br> dan Gili Dasami di Provinsi Nusa Tenggara Timur, Indonesia. Hewan ini oleh penduduk asli pulau Komodo juga disebut dengan</br> nama setempat ora. Nama lain dari komodo adalah buaya darat, walaupun komodo bukanlah spesies </br>buaya.</p>
+  
+  <p align="left">Hewan ini, diklasifikasikan International Union for Conservation of Nature (IUCN) dalam kategori spesies 'terancam punah'. Komodo merupakan kadal terbesar </br>dan tertinggi di dunia. Komodo dapat ditemui di</br> kawasan Taman Nasional Komodo, yang menghuni tiga pulau besar yakni </br>Komodo, Rinca, dan Padar, serta dua pulau kecil yaitu Gili Motang dan Nusa Kode</br>, Nusa Tenggara Timur (NTT).</p>
+      </div>
+        <div class="article">
+    <hm><a href="#">/home</a><a href="/article">/article</a></hm>
+    <div class="title"><h1>Biawak Komodo</h1></div>
+  </div>
+      <!--Sidenav-->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Beranda</a>
+  <i class="fa-brands fa-youtube"></i><a href="https://youtube.com/@rizxyu2761"><i class="fa-brands fa-youtube"></i> Youtube</a>
+</div>
+  </body>
+  <script>
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
 
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+  </script>
+</html>
